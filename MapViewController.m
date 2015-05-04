@@ -10,6 +10,7 @@
 
 @interface MapViewController ()
 
+
 @end
 
 @implementation MapViewController
@@ -35,12 +36,23 @@
     self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:self.mapView];
   
+  self.mapView.delegate = self;
+  self.locationManager = [[CLLocationManager alloc]init];
+  if (IS_OS_8_OR_LATER) {
+    [self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager requestAlwaysAuthorization];
+  }
+  [self.locationManager startUpdatingLocation];
+  self.mapView.showsUserLocation = YES;
+  self.mapView.showsPointsOfInterest = YES;
+  
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation
