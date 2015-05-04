@@ -21,9 +21,11 @@
   
   MapViewController *mapViewController = [[MapViewController alloc]init];
   mapViewController.title = @"Maps";
+  mapViewController.tabBarItem.image = [UIImage imageNamed:@"Map"];
   
   UIViewController *moreInfoViewController = [[UIViewController alloc]init];
   moreInfoViewController.title = @"More Info";
+  moreInfoViewController.tabBarItem.image = [UIImage imageNamed:@"Info"];
   
   UITabBarController *tabBarController = [[UITabBarController alloc]init];
   
