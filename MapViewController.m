@@ -46,6 +46,26 @@
   self.mapView.showsUserLocation = YES;
   self.mapView.showsPointsOfInterest = YES;
   
+  //set the latitude and longtitude
+  double lat = 43.642566;
+  double lng = -79.387057;
+  
+  //Structure that creates a geographical coordinate
+  CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(lat, lng);
+  
+  /* MKPlacemark object stores placemark data for a given long/lat Placemark data
+   includes information such as the country, state, city, and street address
+   associated with the specified coordinate. You can initialize a placemark using
+   the initWithPlacemark: inherited method or the
+   initWithCoordinate:addressDictionary: method specifying a coordinate and address
+   dictionary. */
+  
+  MKPlacemark *placemark  = [[MKPlacemark alloc]initWithCoordinate:coord
+                                                 addressDictionary:nil];
+  MKMapItem *mapItem = [[MKMapItem alloc]initWithPlacemark:placemark];
+  
+  //display the map
+  [mapItem openInMapsWithLaunchOptions:nil];
 }
 
 - (void)didReceiveMemoryWarning {
