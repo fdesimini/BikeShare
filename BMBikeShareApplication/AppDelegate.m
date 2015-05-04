@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MapViewController.h"
+#import "MoreInfoViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,12 +21,9 @@
   // Override point for customization after application launch.
   
   MapViewController *mapViewController = [[MapViewController alloc]init];
-  mapViewController.title = @"Maps";
-  mapViewController.tabBarItem.image = [UIImage imageNamed:@"Map"];
+
   
-  UIViewController *moreInfoViewController = [[UIViewController alloc]init];
-  moreInfoViewController.title = @"More Info";
-  moreInfoViewController.tabBarItem.image = [UIImage imageNamed:@"Info"];
+  MoreInfoViewController *moreInfoViewController = [[MoreInfoViewController alloc]init];
   
   UITabBarController *tabBarController = [[UITabBarController alloc]init];
   

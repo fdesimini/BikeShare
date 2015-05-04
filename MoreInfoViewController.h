@@ -1,5 +1,5 @@
 //
-//  MapViewController.h
+//  MoreInfoViewController.h
 //  BMBikeShareApplication
 //
 //  Created by Kunwardeep Gill on 2015-05-04.
@@ -7,11 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController <MKMapViewDelegate>
-
-@property (strong, nonatomic) MKMapView *mapView;
-
+@interface MoreInfoViewController : UIViewController
 
 @end
