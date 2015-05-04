@@ -14,6 +14,7 @@
 		2A7CF9211AF7CBE800786B52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A7CF9201AF7CBE800786B52 /* Images.xcassets */; };
 		2A7CF9241AF7CBE800786B52 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7CF9221AF7CBE800786B52 /* LaunchScreen.xib */; };
 		2A7CF9301AF7CBE800786B52 /* BMBikeShareApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF92F1AF7CBE800786B52 /* BMBikeShareApplicationTests.m */; };
+		2A7CF93E1AF7DCC600786B52 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF93D1AF7DCC600786B52 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		2A7CF9291AF7CBE800786B52 /* BMBikeShareApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMBikeShareApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7CF92E1AF7CBE800786B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A7CF92F1AF7CBE800786B52 /* BMBikeShareApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMBikeShareApplicationTests.m; sourceTree = "<group>"; };
+		2A7CF93C1AF7DCC600786B52 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		2A7CF93D1AF7DCC600786B52 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,9 @@
 		2A7CF9071AF7CBE800786B52 = {
 			isa = PBXGroup;
 			children = (
+				2A7CF93B1AF7DCA100786B52 /* Controller */,
+				2A7CF93A1AF7DC9900786B52 /* View */,
+				2A7CF9391AF7DC9400786B52 /* Model */,
 				2A7CF9121AF7CBE800786B52 /* BMBikeShareApplication */,
 				2A7CF92C1AF7CBE800786B52 /* BMBikeShareApplicationTests */,
 				2A7CF9111AF7CBE800786B52 /* Products */,
@@ -117,6 +123,29 @@
 				2A7CF92E1AF7CBE800786B52 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A7CF9391AF7DC9400786B52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A7CF93C1AF7DCC600786B52 /* MapViewController.h */,
+				2A7CF93D1AF7DCC600786B52 /* MapViewController.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2A7CF93A1AF7DC9900786B52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2A7CF93B1AF7DCA100786B52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +251,7 @@
 				2A7CF91C1AF7CBE800786B52 /* ViewController.m in Sources */,
 				2A7CF9191AF7CBE800786B52 /* AppDelegate.m in Sources */,
 				2A7CF9161AF7CBE800786B52 /* main.m in Sources */,
+				2A7CF93E1AF7DCC600786B52 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MapViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  
+  MapViewController *mapViewController = [[MapViewController alloc]init];
+  mapViewController.title = @"Maps";
+  
+  UIViewController *moreInfoViewController = [[UIViewController alloc]init];
+  moreInfoViewController.title = @"More Info";
+  
+  UITabBarController *tabBarController = [[UITabBarController alloc]init];
+  
+  tabBarController.viewControllers = @[mapViewController, moreInfoViewController];
+  
+  self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+  self.window.rootViewController = tabBarController;
+  
   return YES;
 }
 
