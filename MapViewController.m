@@ -77,7 +77,7 @@
 {
   [super viewWillAppear:animated];
   [self.bikeShareLocations listOfLocationsSucess:^(NSArray *results) {
-    
+  // put annotation here!
   }];
 }
 

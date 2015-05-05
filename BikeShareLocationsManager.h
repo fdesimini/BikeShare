@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "HTTPCommunication.h"
 
-@interface BikeShareLocationsManager : NSObject
+@interface BikeShareLocationsManager : HTTPCommunication
 
 
 @property (strong, nonatomic) HTTPCommunication *http;

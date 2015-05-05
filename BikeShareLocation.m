@@ -7,7 +7,18 @@
 //
 
 #import "BikeShareLocation.h"
+#import "BikeShareLocationsManager.h"
 
 @implementation BikeShareLocation
 
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+  self = [super init];
+  if (self) {
+    self.title = dictionary[@"latitude"];
+    
+  }
+  return self;
+}
 @end

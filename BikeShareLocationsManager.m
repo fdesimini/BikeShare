@@ -7,14 +7,9 @@
 //
 
 #import "BikeShareLocationsManager.h"
-
+#import "BikeShareLocation.h"
 
 @implementation BikeShareLocationsManager
-{
-  
-  NSArray *test;
-  NSMutableArray *stations;
-}
 
 - (instancetype)init
 {
@@ -25,6 +20,7 @@
   }
   return self;
 }
+
 - (void)listOfLocationsSucess:(void (^)(NSArray *results))sucess
 {
   
@@ -37,22 +33,19 @@
     NSDictionary *data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&error];
     NSLog(@"%@", data);
     
-    NSArray *results = [data valueForKey:@"stationBeanList"];
-    stations = [[NSMutableArray alloc]init];
     if(!error){
-      
+      NSArray *results = [data valueForKey:@"stationBeanList"];
+      NSMutableArray *stationsData = [[NSMutableArray alloc]init];
+
       for (NSDictionary *resultsDictionary in results) {
-        [stations addObject:[resultsDictionary objectForKey:@"stationName"]];
-        //      [teamsId addObject: [resultsDictionary objectForKey:@"id"]];
+        [stationsData addObject:[resultsDictionary objectForKey:@"stationName"]];
+        BikeShareLocation *bikeStation = [[BikeShareLocation alloc] initWithDictionary:resultsDictionary];
+        [stationsData addObject:bikeStation];
       }
-      sucess(stations);
-      NSLog(@"%@", stations);
+      
+      sucess(stationsData);
+      NSLog(@"%@", stationsData);
     }
-    //stations = data;
-//    if(!error) {
-//      NSDictionary *value = data[@"id"];
-//      NSLog(@"%@", value);
-//    }
   }];
 }
 
