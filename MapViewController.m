@@ -31,41 +31,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-  
-    //Initialize the MapView Object to the size of the screen
-    self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.view addSubview:self.mapView];
-  
-  self.mapView.delegate = self;
-  self.locationManager = [[CLLocationManager alloc]init];
-  if (IS_OS_8_OR_LATER) {
+  self.locationManager = [[CLLocationManager alloc] init];
+  self.locationManager.delegate = self;
+  if(IS_OS_8_OR_LATER) {
     [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager requestAlwaysAuthorization];
   }
   [self.locationManager startUpdatingLocation];
+  
+  self.mapView = [[MKMapView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+  self.mapView.delegate = self;
   self.mapView.showsUserLocation = YES;
   self.mapView.showsPointsOfInterest = YES;
+    //Initialize the MapView Object to the size of the screen
+
+  [self.view addSubview:self.mapView];
   
-  //set the latitude and longtitude
-  double lat = 43.642566;
-  double lng = -79.387057;
+
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+  if (annotation == mapView.userLocation) return nil;
+  MKAnnotationView *view = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"annoView"];
+  if (!view) {
+    view = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"annoView"];
+  }
   
-  //Structure that creates a geographical coordinate
-  CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(lat, lng);
-  
-  /* MKPlacemark object stores placemark data for a given long/lat Placemark data
-   includes information such as the country, state, city, and street address
-   associated with the specified coordinate. You can initialize a placemark using
-   the initWithPlacemark: inherited method or the
-   initWithCoordinate:addressDictionary: method specifying a coordinate and address
-   dictionary. */
-  
-  MKPlacemark *placemark  = [[MKPlacemark alloc]initWithCoordinate:coord
-                                                 addressDictionary:nil];
-  MKMapItem *mapItem = [[MKMapItem alloc]initWithPlacemark:placemark];
-  
-  //display the map
-  [mapItem openInMapsWithLaunchOptions:nil];
+  return view;
+}
+
+- (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
+{
+  self.mapView.showsUserLocation = YES;
 }
 
 - (void)didReceiveMemoryWarning {
