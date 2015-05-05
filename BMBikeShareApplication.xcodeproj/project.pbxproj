@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A4E10A21AF9023800184C93 /* HTTPCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E10A11AF9023800184C93 /* HTTPCommunication.m */; };
+		2A4E10A51AF9181A00184C93 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E10A41AF9181A00184C93 /* Annotation.m */; };
 		2A7CF9161AF7CBE800786B52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF9151AF7CBE800786B52 /* main.m */; };
 		2A7CF9191AF7CBE800786B52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF9181AF7CBE800786B52 /* AppDelegate.m */; };
 		2A7CF91C1AF7CBE800786B52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF91B1AF7CBE800786B52 /* ViewController.m */; };
@@ -34,6 +35,8 @@
 /* Begin PBXFileReference section */
 		2A4E10A01AF9023800184C93 /* HTTPCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPCommunication.h; sourceTree = "<group>"; };
 		2A4E10A11AF9023800184C93 /* HTTPCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPCommunication.m; sourceTree = "<group>"; };
+		2A4E10A31AF9181A00184C93 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		2A4E10A41AF9181A00184C93 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		2A7CF9101AF7CBE800786B52 /* BMBikeShareApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMBikeShareApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7CF9141AF7CBE800786B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A7CF9151AF7CBE800786B52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 			children = (
 				2A4E10A01AF9023800184C93 /* HTTPCommunication.h */,
 				2A4E10A11AF9023800184C93 /* HTTPCommunication.m */,
+				2A4E10A31AF9181A00184C93 /* Annotation.h */,
+				2A4E10A41AF9181A00184C93 /* Annotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				2A7CF9411AF7E29C00786B52 /* MoreInfoViewController.m in Sources */,
 				2A7CF91C1AF7CBE800786B52 /* ViewController.m in Sources */,
 				2A4E10A21AF9023800184C93 /* HTTPCommunication.m in Sources */,
+				2A4E10A51AF9181A00184C93 /* Annotation.m in Sources */,
 				2A7CF9191AF7CBE800786B52 /* AppDelegate.m in Sources */,
 				2A7CF9161AF7CBE800786B52 /* main.m in Sources */,
 				2A7CF93E1AF7DCC600786B52 /* MapViewController.m in Sources */,
