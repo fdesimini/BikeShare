@@ -7,7 +7,6 @@
 //
 
 #import "MapViewController.h"
-
 @interface MapViewController ()
 
 
@@ -20,6 +19,8 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     self.tabBarItem.title = @"Maps";
+    //UIImage *image = [UIImage imageNamed:@"pika"];
+    //self.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.tabBarItem.image = [UIImage imageNamed:@"Map"];
     self.view.backgroundColor = [UIColor blueColor];
 
@@ -30,7 +31,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  NSMutableArray *test1 = [[NSMutableArray alloc]init];
+  
+  NSLog(@"%@", test1);
+  
+  self.bikeShareLocations = [[BikeShareLocationsManager alloc] init];
+  
+  // Do any additional setup after loading the view.
   self.locationManager = [[CLLocationManager alloc] init];
   self.locationManager.delegate = self;
   if(IS_OS_8_OR_LATER) {
@@ -44,8 +51,9 @@
   self.mapView.showsUserLocation = YES;
   self.mapView.showsPointsOfInterest = YES;
     //Initialize the MapView Object to the size of the screen
-
   [self.view addSubview:self.mapView];
+
+  
   
 //  // set longitude and longitude
 //  double lat = 43.642566;
@@ -63,6 +71,14 @@
 //  // display the map
 //  [mapItem openInMapsWithLaunchOptions:nil];
   
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+  [super viewWillAppear:animated];
+  [self.bikeShareLocations listOfLocationsSucess:^(NSArray *results) {
+    
+  }];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
