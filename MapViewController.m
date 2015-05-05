@@ -47,7 +47,22 @@
 
   [self.view addSubview:self.mapView];
   
-
+//  // set longitude and longitude
+//  double lat = 43.642566;
+//  double lng = -79.387057;
+//  //A structure that contains a geographical coordinate using the WGS 84 reference frame.
+//  
+//  CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(lat,lng);
+//  
+//  //     A MKPlacemark object stores placemark data for a given latitude and longitude. Placemark data includes information such as the country, state, city, and //street address associated with the specified coordinate. You can initialize a placemark using the initWithPlacemark: inherited method or the //initWithCoordinate:addressDictionary: method specifying a coordinate and address dictionary.
+//  
+//  MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coord
+//                                                 addressDictionary:nil];
+//  //A MKPlacemark object stores placemark data for a given latitude and longitude. Placemark data includes information such as the country, state, city, and //street address associated with the specified coordinate.
+//  MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+//  // display the map
+//  [mapItem openInMapsWithLaunchOptions:nil];
+  
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
@@ -56,6 +71,7 @@
   if (!view) {
     view = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"annoView"];
   }
+  view.image = [UIImage imageNamed:@"Pin"];
   
   return view;
 }
