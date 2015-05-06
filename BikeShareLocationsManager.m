@@ -7,9 +7,11 @@
 //
 
 #import "BikeShareLocationsManager.h"
-#import "BikeShareLocation.h"
 
 @implementation BikeShareLocationsManager
+{
+  NSMutableArray *stationData;
+}
 
 - (instancetype)init
 {
@@ -17,6 +19,7 @@
   if (self)
   {
     self.http = [[HTTPCommunication alloc] init];
+    
   }
   return self;
 }
@@ -31,20 +34,33 @@
     
     //De-serialize the information from the API
     NSDictionary *data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&error];
-    NSLog(@"%@", data);
+    //NSLog(@"%@", data);
+    //self.station = [[BikeShareLocation alloc]init];
     
     if(!error){
       NSArray *results = [data valueForKey:@"stationBeanList"];
-      NSMutableArray *stationsData = [[NSMutableArray alloc]init];
-
+      //NSLog(@"%@", results);
+    
+      stationData = [[NSMutableArray alloc]init];
       for (NSDictionary *resultsDictionary in results) {
-        [stationsData addObject:[resultsDictionary objectForKey:@"stationName"]];
-        BikeShareLocation *bikeStation = [[BikeShareLocation alloc] initWithDictionary:resultsDictionary];
-        [stationsData addObject:bikeStation];
+        BikeShareLocation *station = [[BikeShareLocation alloc] init];
+        station.stationName = [resultsDictionary objectForKey:@"stationName"];
+        station.stationAvailableBikes = [resultsDictionary objectForKey:@"availableBikes"];
+        station.stationAvailableDocks = [resultsDictionary objectForKey:@"availableDocks"];
+        station.stationID = [resultsDictionary objectForKey:@"id"];
+        station.stationLatitude = [resultsDictionary objectForKey:@"latitude"];
+        station.stationLongtitude = [resultsDictionary objectForKey:@"longitude"];
+        station.coordinate = CLLocationCoordinate2DMake([station.stationLatitude doubleValue], [station.stationLongtitude doubleValue]);
+        [stationData addObject:station];
+        
+//        NSLog(@"%@",self.station.stationName);
+//        NSLog(@"%@",self.station.stationAvailableBikes);
+//        BikeShareLocation *bikeStation = [[BikeShareLocation alloc] initWithDictionary:resultsDictionary];
+        //[stationData addObject:bikeStation];
       }
       
-      sucess(stationsData);
-      NSLog(@"%@", stationsData);
+      sucess(stationData);
+      NSLog(@"%@", stationData);
     }
   }];
 }

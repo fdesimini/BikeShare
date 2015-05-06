@@ -23,6 +23,7 @@
     //self.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.tabBarItem.image = [UIImage imageNamed:@"Map"];
     self.view.backgroundColor = [UIColor blueColor];
+    self.mapView.delegate = self;
 
   }
   return self;
@@ -81,16 +82,26 @@
   }];
 }
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-  if (annotation == mapView.userLocation) return nil;
-  MKAnnotationView *view = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"annoView"];
-  if (!view) {
-    view = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"annoView"];
-  }
-  view.image = [UIImage imageNamed:@"Pin"];
-  
-  return view;
+//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+//  if (annotation == mapView.userLocation) return nil;
+//  MKAnnotationView *view = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"annoView"];
+//  if (!view) {
+//    view = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"annoView"];
+//  }
+//  view.image = [UIImage imageNamed:@"Pin"];
+//  
+//  return view;
+//}
+
+//Zooms into current location
+- (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views
+{
+  MKAnnotationView *annotationView = [views objectAtIndex:0];
+  id<MKAnnotation> mp = [annotationView annotation];
+  MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate] ,250,250);
+  [mv setRegion:region animated:YES];
 }
+
 
 - (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
 {

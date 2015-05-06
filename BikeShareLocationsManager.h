@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "HTTPCommunication.h"
+#import "BikeShareLocation.h"
+
 
 @interface BikeShareLocationsManager : HTTPCommunication
 
 
 @property (strong, nonatomic) HTTPCommunication *http;
+@property (strong, nonatomic) BikeShareLocation *station;
 //@property (strong, nonatomic) NSDictionary *dictionary;
 
 - (void)listOfLocationsSucess:(void (^)(NSArray *results))sucess;

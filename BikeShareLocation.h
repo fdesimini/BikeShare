@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+ 
 
 
 @interface BikeShareLocation : NSObject <MKAnnotation>
 
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
+
 @property (nonatomic, readwrite) CLLocationCoordinate2D coordinate;
 
 
@@ -26,6 +30,6 @@
 @property (strong, nonatomic) NSNumber *stationAvailableBikes;
 @property (strong, nonatomic) NSNumber *stationLandmark;
 
--(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+//-(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
