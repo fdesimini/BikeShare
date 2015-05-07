@@ -78,7 +78,14 @@
 {
   [super viewWillAppear:animated];
   [self.bikeShareLocations listOfLocationsSucess:^(NSArray *results) {
-  // put annotation here!
+    // put annotation here!
+    
+    for (BikeShareLocation *location in results) {
+    
+      [self.mapView addAnnotation:location];
+      
+    }
+
   }];
 }
 

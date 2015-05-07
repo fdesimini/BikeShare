@@ -51,16 +51,19 @@
         station.stationLatitude = [resultsDictionary objectForKey:@"latitude"];
         station.stationLongtitude = [resultsDictionary objectForKey:@"longitude"];
         station.coordinate = CLLocationCoordinate2DMake([station.stationLatitude doubleValue], [station.stationLongtitude doubleValue]);
-        [stationData addObject:station];
         
-//        NSLog(@"%@",self.station.stationName);
-//        NSLog(@"%@",self.station.stationAvailableBikes);
-//        BikeShareLocation *bikeStation = [[BikeShareLocation alloc] initWithDictionary:resultsDictionary];
-        //[stationData addObject:bikeStation];
+        [stationData addObject:station];
+        //station.coordinate = annotationCoordinate
+        //[self.mapView addAnnotation:annotation];
       }
       
-      sucess(stationData);
-      NSLog(@"%@", stationData);
+      if (sucess) {
+        
+        sucess(stationData);
+      }
+      //display Array of custom objects
+      //NSLog(@"%@", stationData);
+
     }
   }];
 }
