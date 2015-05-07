@@ -89,7 +89,28 @@
   }];
 }
 
-//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForannotation:(id<MKAnnotation>)annotation
+
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+  
+  MKAnnotationView *view = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"annoView"];
+
+  if ([annotation isKindOfClass:[BikeShareLocation class]]) {
+  
+    view = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"annoView"];
+  }
+  
+  view.image = [UIImage imageNamed:@"bstoronto"];
+  view.frame = CGRectMake(0, 0, 50 , 35);
+  view.canShowCallout = YES;
+  
+  UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+  [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
+  view.rightCalloutAccessoryView = rightButton;
+  
+  return view;
+}
+
+//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 //{
 //
 //    // Try to dequeue an existing pin view first.
@@ -123,6 +144,7 @@
 //  
 //  return view;
 //}
+
 
 //Zooms into current location
 - (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views
