@@ -89,7 +89,6 @@
   }];
 }
 
-
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
   
   MKAnnotationView *view = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"annoView"];
@@ -109,41 +108,6 @@
   
   return view;
 }
-
-//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-//{
-//
-//    // Try to dequeue an existing pin view first.
-//    CustomAnnotationView *view = (CustomAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"AnnoView"];
-////    
-////    if (!view)
-////    {
-//      // If an existing pin view was not available, create one.
-////      view = [[MKPinAnnotationView alloc] initWithAnnotation:annotation
-////                                                reuseIdentifier:@"AnnoView"];
-////      view.pinColor = MKPinAnnotationColorRed;
-//      view.image = [UIImage imageNamed:@"Pin"];
-//      view.canShowCallout = YES;
-////
-////      // If appropriate, customize the callout by adding accessory views (code not shown).
-////    }
-////    else
-////      view.annotation = annotation;
-////    
-//              return view;
-//}
-
-
-//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-//  if (annotation == mapView.userLocation) return nil;
-//  MKAnnotationView *view = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"annoView"];
-//  if (!view) {
-//    view = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"annoView"];
-//  }
-//  view.image = [UIImage imageNamed:@"Pin"];
-//  
-//  return view;
-//}
 
 
 //Zooms into current location
