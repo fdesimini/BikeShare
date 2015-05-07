@@ -155,10 +155,10 @@
 				2A4E10A11AF9023800184C93 /* HTTPCommunication.m */,
 				2ADF423C1AF97D1300A9DBA8 /* BikeShareLocation.h */,
 				2ADF423D1AF97D1300A9DBA8 /* BikeShareLocation.m */,
-				2A21D37B1AFBDE9E0092BBEC /* CustomAnnotationView.h */,
-				2A21D37C1AFBDE9E0092BBEC /* CustomAnnotationView.m */,
 				2A4E10A61AF926BC00184C93 /* BikeShareLocationsManager.h */,
 				2A4E10A71AF926BC00184C93 /* BikeShareLocationsManager.m */,
+				2A21D37B1AFBDE9E0092BBEC /* CustomAnnotationView.h */,
+				2A21D37C1AFBDE9E0092BBEC /* CustomAnnotationView.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";

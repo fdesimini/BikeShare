@@ -23,8 +23,7 @@
   self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
   
   if (self) {
-    UIImage *pin = [UIImage imageNamed:@"Pin"];
-    self.image = pin;
+    self.image = [UIImage imageNamed:@"Pin"];
     self.canShowCallout = YES;
   }
   return self;

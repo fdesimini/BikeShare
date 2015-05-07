@@ -34,16 +34,15 @@
     
     //De-serialize the information from the API
     NSDictionary *data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&error];
-    //NSLog(@"%@", data);
-    //self.station = [[BikeShareLocation alloc]init];
     
     if(!error){
       NSArray *results = [data valueForKey:@"stationBeanList"];
-      //NSLog(@"%@", results);
-    
+      
       stationData = [[NSMutableArray alloc]init];
       for (NSDictionary *resultsDictionary in results) {
+        
         BikeShareLocation *station = [[BikeShareLocation alloc] init];
+        
         station.stationID = [resultsDictionary objectForKey:@"id"];
         station.stationName = [resultsDictionary objectForKey:@"stationName"];
         station.stationAvailableBikes = [resultsDictionary objectForKey:@"availableBikes"];
@@ -55,19 +54,12 @@
         station.coordinate = CLLocationCoordinate2DMake([station.stationLatitude doubleValue], [station.stationLongtitude doubleValue]);
         
         station.title = [resultsDictionary objectForKey:@"stationName"];
-        station.subtitle = [NSString stringWithFormat:@"Available Bikes: %@  Available Docks: %@",[station.stationAvailableBikes stringValue], [station.stationAvailableDocks stringValue]];
+        station.subtitle = [NSString stringWithFormat:@"Available Bikes: %@  Empty Docks: %@",[station.stationAvailableBikes stringValue], [station.stationAvailableDocks stringValue]];
         
         [stationData addObject:station];
-        //station.coordinate = annotationCoordinate
-        //[self.mapView addAnnotation:annotation];
       }
-      
-      if (sucess) {
-        
+
         sucess(stationData);
-      }
-      //display Array of custom objects
-      //NSLog(@"%@", stationData);
 
     }
   }];
