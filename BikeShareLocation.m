@@ -25,18 +25,19 @@
 //}
 
 
--(MKAnnotationView *)mapView:(MKMapView *)mapView viewForannotation:(id<MKAnnotation>)annotation
-{
-  MKAnnotationView *view = [mapView dequeueReusableAnnotationViewWithIdentifier:@"annoView"];
-  view.image = [UIImage imageNamed:@"Pin"];
-  //MKPinAnnotationView *instanceOfAnnotation = [[MKPinAnnotationView alloc]init];
-  
-  if(!view) {
-    view = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"annoView"];
-  }
-  view.annotation = annotation;
-  return view;
-}
+
+//-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForannotation:(id<MKAnnotation>)annotation
+//{
+//  MKAnnotationView *view = [mapView dequeueReusableAnnotationViewWithIdentifier:@"annoView"];
+//  view.image = [UIImage imageNamed:@"Pin"];
+//  //MKPinAnnotationView *instanceOfAnnotation = [[MKPinAnnotationView alloc]init];
+//  
+//  if(!view) {
+//    view = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"annoView"];
+//  }
+//  view.annotation = annotation;
+//  return view;
+//}
 
 
 

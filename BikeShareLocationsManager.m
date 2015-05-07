@@ -44,13 +44,18 @@
       stationData = [[NSMutableArray alloc]init];
       for (NSDictionary *resultsDictionary in results) {
         BikeShareLocation *station = [[BikeShareLocation alloc] init];
+        station.stationID = [resultsDictionary objectForKey:@"id"];
         station.stationName = [resultsDictionary objectForKey:@"stationName"];
         station.stationAvailableBikes = [resultsDictionary objectForKey:@"availableBikes"];
+        //station.subtitle = [resultsDictionary objectForKey:@"availableBikes"];
         station.stationAvailableDocks = [resultsDictionary objectForKey:@"availableDocks"];
-        station.stationID = [resultsDictionary objectForKey:@"id"];
+        
         station.stationLatitude = [resultsDictionary objectForKey:@"latitude"];
         station.stationLongtitude = [resultsDictionary objectForKey:@"longitude"];
         station.coordinate = CLLocationCoordinate2DMake([station.stationLatitude doubleValue], [station.stationLongtitude doubleValue]);
+        
+        station.title = [resultsDictionary objectForKey:@"stationName"];
+        station.subtitle = [NSString stringWithFormat:@"Available Bikes: %@  Available Docks: %@",[station.stationAvailableBikes stringValue], [station.stationAvailableDocks stringValue]];
         
         [stationData addObject:station];
         //station.coordinate = annotationCoordinate

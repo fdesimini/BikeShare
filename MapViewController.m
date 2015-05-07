@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "CustomAnnotationView.h"
 @interface MapViewController ()
 
 
@@ -53,8 +54,6 @@
   self.mapView.showsPointsOfInterest = YES;
     //Initialize the MapView Object to the size of the screen
   [self.view addSubview:self.mapView];
-
-  
   
 //  // set longitude and longitude
 //  double lat = 43.642566;
@@ -79,15 +78,40 @@
   [super viewWillAppear:animated];
   [self.bikeShareLocations listOfLocationsSucess:^(NSArray *results) {
     // put annotation here!
-    
+    //Where the magic happens
     for (BikeShareLocation *location in results) {
     
       [self.mapView addAnnotation:location];
       
     }
+    
 
   }];
 }
+
+//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForannotation:(id<MKAnnotation>)annotation
+//{
+//
+//    // Try to dequeue an existing pin view first.
+//    CustomAnnotationView *view = (CustomAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"AnnoView"];
+////    
+////    if (!view)
+////    {
+//      // If an existing pin view was not available, create one.
+////      view = [[MKPinAnnotationView alloc] initWithAnnotation:annotation
+////                                                reuseIdentifier:@"AnnoView"];
+////      view.pinColor = MKPinAnnotationColorRed;
+//      view.image = [UIImage imageNamed:@"Pin"];
+//      view.canShowCallout = YES;
+////
+////      // If appropriate, customize the callout by adding accessory views (code not shown).
+////    }
+////    else
+////      view.annotation = annotation;
+////    
+//              return view;
+//}
+
 
 //- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
 //  if (annotation == mapView.userLocation) return nil;
@@ -105,8 +129,11 @@
 {
   MKAnnotationView *annotationView = [views objectAtIndex:0];
   id<MKAnnotation> mp = [annotationView annotation];
-  MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate] ,250,250);
+
+  if (mp == mv.userLocation) {
+  MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate] ,700 , 700);
   [mv setRegion:region animated:YES];
+  }
 }
 
 
