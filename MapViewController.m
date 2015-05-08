@@ -82,10 +82,7 @@
     for (BikeShareLocation *location in results) {
     
       [self.mapView addAnnotation:location];
-      
     }
-    
-
   }];
 }
 
@@ -106,6 +103,8 @@
   [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
   view.rightCalloutAccessoryView = rightButton;
   
+  UIImageView *bikeShareImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"biking"]];
+  view.leftCalloutAccessoryView = bikeShareImage;
   return view;
 }
 

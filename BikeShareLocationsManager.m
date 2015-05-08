@@ -54,7 +54,7 @@
         station.coordinate = CLLocationCoordinate2DMake([station.stationLatitude doubleValue], [station.stationLongtitude doubleValue]);
         
         station.title = [resultsDictionary objectForKey:@"stationName"];
-        station.subtitle = [NSString stringWithFormat:@"Available Bikes: %@  Empty Docks: %@",[station.stationAvailableBikes stringValue], [station.stationAvailableDocks stringValue]];
+        station.subtitle = [NSString stringWithFormat:@"Bikes Avail. %@  Empty Docks: %@",[station.stationAvailableBikes stringValue], [station.stationAvailableDocks stringValue]];
         
         [stationData addObject:station];
       }
