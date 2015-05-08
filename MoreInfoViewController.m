@@ -28,6 +28,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+  UILabel *stationName = [[UILabel alloc]initWithFrame:CGRectMake(20, 20, 100, 44)];
+  stationName.text = @"Insert Info Here";
+  stationName.textColor = [UIColor blackColor];
+  
     // Do any additional setup after loading the view.
 }
 

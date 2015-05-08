@@ -7,7 +7,6 @@
 //
 
 #import "MapViewController.h"
-#import "CustomAnnotationView.h"
 #import "MoreInfoViewController.h"
 
 @interface MapViewController ()
@@ -93,7 +92,6 @@
   
   MoreInfoViewController *moreInfoVC = [[MoreInfoViewController alloc]init];
   [self.navigationController pushViewController:moreInfoVC animated:YES];
-  NSLog(@"Button Pressed");
   
 }
 

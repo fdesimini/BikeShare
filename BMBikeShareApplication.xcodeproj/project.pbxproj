@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A21D37D1AFBDE9E0092BBEC /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A21D37C1AFBDE9E0092BBEC /* CustomAnnotationView.m */; };
 		2A4E10A21AF9023800184C93 /* HTTPCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E10A11AF9023800184C93 /* HTTPCommunication.m */; };
 		2A4E10A81AF926BC00184C93 /* BikeShareLocationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E10A71AF926BC00184C93 /* BikeShareLocationsManager.m */; };
 		2A7CF9161AF7CBE800786B52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF9151AF7CBE800786B52 /* main.m */; };
@@ -36,8 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2A21D37B1AFBDE9E0092BBEC /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
-		2A21D37C1AFBDE9E0092BBEC /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
 		2A4E10A01AF9023800184C93 /* HTTPCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPCommunication.h; sourceTree = "<group>"; };
 		2A4E10A11AF9023800184C93 /* HTTPCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPCommunication.m; sourceTree = "<group>"; };
 		2A4E10A61AF926BC00184C93 /* BikeShareLocationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeShareLocationsManager.h; sourceTree = "<group>"; };
@@ -160,8 +157,6 @@
 				2ADF423D1AF97D1300A9DBA8 /* BikeShareLocation.m */,
 				2A4E10A61AF926BC00184C93 /* BikeShareLocationsManager.h */,
 				2A4E10A71AF926BC00184C93 /* BikeShareLocationsManager.m */,
-				2A21D37B1AFBDE9E0092BBEC /* CustomAnnotationView.h */,
-				2A21D37C1AFBDE9E0092BBEC /* CustomAnnotationView.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -285,7 +280,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A21D37D1AFBDE9E0092BBEC /* CustomAnnotationView.m in Sources */,
 				2A7CF9411AF7E29C00786B52 /* MoreInfoViewController.m in Sources */,
 				2A4E10A81AF926BC00184C93 /* BikeShareLocationsManager.m in Sources */,
 				2A7CF91C1AF7CBE800786B52 /* ViewController.m in Sources */,
