@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A21D37D1AFBDE9E0092BBEC /* CustomAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A21D37C1AFBDE9E0092BBEC /* CustomAnnotationView.m */; };
+		2A4E10A21AF9023800184C93 /* HTTPCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E10A11AF9023800184C93 /* HTTPCommunication.m */; };
+		2A4E10A81AF926BC00184C93 /* BikeShareLocationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4E10A71AF926BC00184C93 /* BikeShareLocationsManager.m */; };
 		2A7CF9161AF7CBE800786B52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF9151AF7CBE800786B52 /* main.m */; };
 		2A7CF9191AF7CBE800786B52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF9181AF7CBE800786B52 /* AppDelegate.m */; };
 		2A7CF91C1AF7CBE800786B52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF91B1AF7CBE800786B52 /* ViewController.m */; };
@@ -14,6 +17,12 @@
 		2A7CF9211AF7CBE800786B52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A7CF9201AF7CBE800786B52 /* Images.xcassets */; };
 		2A7CF9241AF7CBE800786B52 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7CF9221AF7CBE800786B52 /* LaunchScreen.xib */; };
 		2A7CF9301AF7CBE800786B52 /* BMBikeShareApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF92F1AF7CBE800786B52 /* BMBikeShareApplicationTests.m */; };
+		2A7CF93E1AF7DCC600786B52 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF93D1AF7DCC600786B52 /* MapViewController.m */; };
+		2A7CF9411AF7E29C00786B52 /* MoreInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7CF9401AF7E29C00786B52 /* MoreInfoViewController.m */; };
+		2A7CF9431AF7E49600786B52 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7CF9421AF7E49600786B52 /* MapKit.framework */; };
+		2A7CF9461AF7E81700786B52 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7CF9441AF7E78900786B52 /* CoreLocation.framework */; };
+		2AABD1261AFC03E200B6EC3C /* Bitmaker_Toronto.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2AABD1251AFC03E200B6EC3C /* Bitmaker_Toronto.gpx */; };
+		2ADF423E1AF97D1300A9DBA8 /* BikeShareLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF423D1AF97D1300A9DBA8 /* BikeShareLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A21D37B1AFBDE9E0092BBEC /* CustomAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotationView.h; sourceTree = "<group>"; };
+		2A21D37C1AFBDE9E0092BBEC /* CustomAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotationView.m; sourceTree = "<group>"; };
+		2A4E10A01AF9023800184C93 /* HTTPCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPCommunication.h; sourceTree = "<group>"; };
+		2A4E10A11AF9023800184C93 /* HTTPCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPCommunication.m; sourceTree = "<group>"; };
+		2A4E10A61AF926BC00184C93 /* BikeShareLocationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeShareLocationsManager.h; sourceTree = "<group>"; };
+		2A4E10A71AF926BC00184C93 /* BikeShareLocationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeShareLocationsManager.m; sourceTree = "<group>"; };
 		2A7CF9101AF7CBE800786B52 /* BMBikeShareApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMBikeShareApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7CF9141AF7CBE800786B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A7CF9151AF7CBE800786B52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +55,15 @@
 		2A7CF9291AF7CBE800786B52 /* BMBikeShareApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMBikeShareApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7CF92E1AF7CBE800786B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A7CF92F1AF7CBE800786B52 /* BMBikeShareApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMBikeShareApplicationTests.m; sourceTree = "<group>"; };
+		2A7CF93C1AF7DCC600786B52 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		2A7CF93D1AF7DCC600786B52 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		2A7CF93F1AF7E29C00786B52 /* MoreInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreInfoViewController.h; sourceTree = "<group>"; };
+		2A7CF9401AF7E29C00786B52 /* MoreInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreInfoViewController.m; sourceTree = "<group>"; };
+		2A7CF9421AF7E49600786B52 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2A7CF9441AF7E78900786B52 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2AABD1251AFC03E200B6EC3C /* Bitmaker_Toronto.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Bitmaker_Toronto.gpx; path = ../Bitmaker_Toronto.gpx; sourceTree = "<group>"; };
+		2ADF423C1AF97D1300A9DBA8 /* BikeShareLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeShareLocation.h; sourceTree = "<group>"; };
+		2ADF423D1AF97D1300A9DBA8 /* BikeShareLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeShareLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7CF9461AF7E81700786B52 /* CoreLocation.framework in Frameworks */,
+				2A7CF9431AF7E49600786B52 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +89,11 @@
 		2A7CF9071AF7CBE800786B52 = {
 			isa = PBXGroup;
 			children = (
+				2A7CF9441AF7E78900786B52 /* CoreLocation.framework */,
+				2A7CF9421AF7E49600786B52 /* MapKit.framework */,
+				2A7CF93B1AF7DCA100786B52 /* Controller */,
+				2A7CF93A1AF7DC9900786B52 /* View */,
+				2A7CF9391AF7DC9400786B52 /* Model */,
 				2A7CF9121AF7CBE800786B52 /* BMBikeShareApplication */,
 				2A7CF92C1AF7CBE800786B52 /* BMBikeShareApplicationTests */,
 				2A7CF9111AF7CBE800786B52 /* Products */,
@@ -96,6 +127,7 @@
 		2A7CF9131AF7CBE800786B52 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2AABD1251AFC03E200B6EC3C /* Bitmaker_Toronto.gpx */,
 				2A7CF9141AF7CBE800786B52 /* Info.plist */,
 				2A7CF9151AF7CBE800786B52 /* main.m */,
 			);
@@ -117,6 +149,39 @@
 				2A7CF92E1AF7CBE800786B52 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A7CF9391AF7DC9400786B52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A4E10A01AF9023800184C93 /* HTTPCommunication.h */,
+				2A4E10A11AF9023800184C93 /* HTTPCommunication.m */,
+				2ADF423C1AF97D1300A9DBA8 /* BikeShareLocation.h */,
+				2ADF423D1AF97D1300A9DBA8 /* BikeShareLocation.m */,
+				2A4E10A61AF926BC00184C93 /* BikeShareLocationsManager.h */,
+				2A4E10A71AF926BC00184C93 /* BikeShareLocationsManager.m */,
+				2A21D37B1AFBDE9E0092BBEC /* CustomAnnotationView.h */,
+				2A21D37C1AFBDE9E0092BBEC /* CustomAnnotationView.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2A7CF93A1AF7DC9900786B52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2A7CF93B1AF7DCA100786B52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A7CF93C1AF7DCC600786B52 /* MapViewController.h */,
+				2A7CF93D1AF7DCC600786B52 /* MapViewController.m */,
+				2A7CF93F1AF7E29C00786B52 /* MoreInfoViewController.h */,
+				2A7CF9401AF7E29C00786B52 /* MoreInfoViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AABD1261AFC03E200B6EC3C /* Bitmaker_Toronto.gpx in Resources */,
 				2A7CF91F1AF7CBE800786B52 /* Main.storyboard in Resources */,
 				2A7CF9241AF7CBE800786B52 /* LaunchScreen.xib in Resources */,
 				2A7CF9211AF7CBE800786B52 /* Images.xcassets in Resources */,
@@ -219,9 +285,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A21D37D1AFBDE9E0092BBEC /* CustomAnnotationView.m in Sources */,
+				2A7CF9411AF7E29C00786B52 /* MoreInfoViewController.m in Sources */,
+				2A4E10A81AF926BC00184C93 /* BikeShareLocationsManager.m in Sources */,
 				2A7CF91C1AF7CBE800786B52 /* ViewController.m in Sources */,
+				2ADF423E1AF97D1300A9DBA8 /* BikeShareLocation.m in Sources */,
+				2A4E10A21AF9023800184C93 /* HTTPCommunication.m in Sources */,
 				2A7CF9191AF7CBE800786B52 /* AppDelegate.m in Sources */,
 				2A7CF9161AF7CBE800786B52 /* main.m in Sources */,
+				2A7CF93E1AF7DCC600786B52 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -416,6 +488,7 @@
 				2A7CF9351AF7CBE800786B52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A7CF9361AF7CBE800786B52 /* Build configuration list for PBXNativeTarget "BMBikeShareApplicationTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +497,7 @@
 				2A7CF9381AF7CBE800786B52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
