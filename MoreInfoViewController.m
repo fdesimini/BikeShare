@@ -18,9 +18,10 @@
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
+    self.navigationItem.title = @"More Info";
     self.tabBarItem.title = @"More Info";
     self.tabBarItem.image = [UIImage imageNamed:@"Info"];
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
   }
   return self;
 }

@@ -8,6 +8,8 @@
 
 #import "MapViewController.h"
 #import "CustomAnnotationView.h"
+#import "MoreInfoViewController.h"
+
 @interface MapViewController ()
 
 
@@ -19,6 +21,7 @@
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
+    self.navigationItem.title = @"Bike Share Map";
     self.tabBarItem.title = @"Maps";
     //UIImage *image = [UIImage imageNamed:@"pika"];
     //self.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -86,6 +89,14 @@
   }];
 }
 
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+  
+  MoreInfoViewController *moreInfoVC = [[MoreInfoViewController alloc]init];
+  [self.navigationController pushViewController:moreInfoVC animated:YES];
+  NSLog(@"Button Pressed");
+  
+}
+
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
   
   MKAnnotationView *view = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"annoView"];
@@ -109,6 +120,8 @@
 }
 
 
+
+
 //Zooms into current location
 - (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views
 {
@@ -126,6 +139,8 @@
 {
   self.mapView.showsUserLocation = YES;
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

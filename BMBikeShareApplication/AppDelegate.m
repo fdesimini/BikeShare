@@ -21,16 +21,20 @@
   // Override point for customization after application launch.
   
   MapViewController *mapViewController = [[MapViewController alloc]init];
-
+  UINavigationController *navMapVC = [[UINavigationController alloc]initWithRootViewController:mapViewController];
   
   MoreInfoViewController *moreInfoViewController = [[MoreInfoViewController alloc]init];
+ 
+  //UINavigationController *moreInfoVC = [[UINavigationController alloc]initWithRootViewController:moreInfoViewController];
+
   
-  UITabBarController *tabBarController = [[UITabBarController alloc]init];
+  //UITabBarController *tabBarController = [[UITabBarController alloc]init];
   
-  tabBarController.viewControllers = @[mapViewController, moreInfoViewController];
+  //tabBarController.viewControllers = @[navMapVC, moreInfoVC];
   
   self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-  self.window.rootViewController = tabBarController;
+  self.window.rootViewController = navMapVC;
+  [self.window makeKeyAndVisible];
   
   return YES;
 }
